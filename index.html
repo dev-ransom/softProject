@@ -8,23 +8,62 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
- <section id="about">
-    <article class="container">
-        <div class="row">
-           <div class="about-col-1">
-               <img src="./about.jpeg">
-           </div>
-           <div class="about-col-2">
-              <h1 class="sub-titles">about me</h1>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias porro iusto doloribus libero, provident illum quasi enim. Vero neque, nemo eius accusamus exercitationem porro, perferendis accusantium mollitia sed recusandae voluptatem consequatur libero odio sint! Nisi minima, sunt inventore accusantium sint alias tempora nesciunt maxime debitis quibusdam atque totam, non iure!</p>
-              <div class="tab-titles">
-                <p class="tab-links">SKills</p>
-                <p class="tab-links">Experience</p>
-                <p class="tab-links">Education</p>
-              </div> 
-           </div>
-    </article>
- </section>
-        
+    <section id="about">
+        <article class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./about.jpeg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-titles">about me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus suscipit, distinctio cum blanditiis quas officiis odit impedit incidunt, pariatur iusto animi ut a velit nemo tenetur eius deserunt veritatis maxime facilis dicta voluptate quibusdam, sunt earum quis. Officia dolores accusamus libero obcaecati laborum illo atque nisi maxime nostrum praesentium amet at dicta nam labore aperiam, aspernatur totam sit debitis modi.</p>
+                    <div class="tab-titles" id="skills">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="experience">
+                        <ul>
+                            <li><span>UI&UX</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>front end</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>Back end</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>sQA</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UI&UX</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>front end</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>Back end</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>sQA</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents">
+                        <ul>
+                            <li><span>UI&UX</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>front end</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>Back end</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li><span>sQA</span><br>Lorem ipsum dolor sit amet consectetur.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+
+
+    <script>
+        var tablinks= document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove('active-link')
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab')
+            }
+        }
+    </script>
 </body>
 </html>
